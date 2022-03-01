@@ -3,6 +3,10 @@ title: Cybercrafted
 date: 2022-02-13 10:00:00 -0500
 categories: [TryHackMe]
 tags: [tryhackme, sqli, sqlmap, ssh2john, screen]
+image:
+  src: /assets/img/post_images/cybercrafted/cc-banner.png
+  width: 1920
+  height: 300
 ---
 
 ## **Intro**
