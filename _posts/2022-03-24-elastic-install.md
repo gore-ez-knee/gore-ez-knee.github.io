@@ -15,8 +15,8 @@ image:
 I've messed with installation of Elastic using Elastic Cloud on Kubernetes (ECK) with AWS Elastic Kubernetes Service (EKS). But I have never tried a manual install on a server. These are the instructions I ran to get Elasticsearch and Kibana up and running with HTTPS enabled between Kibana and our browser. Personally I think I would prefer setting up Elastic with Docker, and perhaps I'll add to this guide to include Docker installation later. But for now I just wanted to try a bare metal install of an Elastic Stack. To mimic installing, configuring, and accessing an Elastic Stack on a server via a cloud provider or anywhere really, I thought it would be beneficial to setup my own server on a VM to test the waters. I included how I setup an Ubuntu Server, if anyone was interested. If not, you can skip to `Install Elasticsearch`
 
 These are the guides I used to help set this up:
-- https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html
-- https://www.elastic.co/guide/en/kibana/current/deb.html
+- <https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html>
+- <https://www.elastic.co/guide/en/kibana/current/deb.html>
 
 
 ## **Install Ubuntu Server**
