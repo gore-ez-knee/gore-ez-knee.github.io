@@ -1,5 +1,6 @@
 ---
 title: Quickstart Elastic Stack
+author: gore-ez-knee
 date: 2022-03-24 14:30:00 -0500
 categories: [Misc, Elastic]
 tags: [elasticsearch, elastic, kibana, ubuntu, installation]
@@ -89,6 +90,8 @@ These are the guides I used to help set this up:
 16. Open up a terminal on your host machine and attempt to SSH to the server using the IP of the server. I'm using WSL on Windows Terminal You should be able to successfully SSH to the VM Ubuntu Server
 
     ![](/assets/img/post_images/elastic_install/snip20.png)
+
+### NOTE
 
 > An example showing the `tip` type prompt.
 {: .prompt-tip }
