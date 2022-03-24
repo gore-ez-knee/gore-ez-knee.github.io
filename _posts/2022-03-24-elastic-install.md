@@ -90,8 +90,8 @@ These are the guides I used to help set this up:
 
     ![](/assets/img/post_images/elastic_install/snip20.png)
 
-> Now would be a really good time to take a Snapshot of your Ubuntu Server.
-{: .prompt-tip}
+> An example showing the `tip` type prompt.
+{: .prompt-tip }
 
 ## Install Elasticsearch
 
