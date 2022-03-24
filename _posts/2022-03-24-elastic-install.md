@@ -1,6 +1,6 @@
 ---
 title: Quickstart Elastic Stack
-date: 2022-03-24 14:30:00 -0600
+date: 2022-03-24 14:30:00 -0500
 categories: [Misc, Elastic]
 tags: [elasticsearch, elastic, kibana, ubuntu, installation]
 image:
