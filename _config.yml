@@ -24,7 +24,7 @@ timezone: America/Chicago
 
 title: Gore-Ez-Knee                          # the main title
 
-tagline: Infosec Nerd                          # it will display as the sub-title
+tagline: Nerd                          # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Blog to track learning progress
@@ -49,7 +49,7 @@ social:
     - https://github.com/gore-ez-knee       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/gorecznyj
 
 google_site_verification: google_meta_tag_verification # change to your verification string
 
@@ -57,7 +57,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 
 
 google_analytics:
-  id: ''              # fill in your Google Analytics ID
+  id: 'G-BJ7S2G5H9F'              # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
