@@ -10,8 +10,6 @@ image:
   height: 400
 ---
 
-# **Quickstart Elastic Stack**
-
 I've messed with installation of Elastic using Elastic Cloud on Kubernetes (ECK) with AWS Elastic Kubernetes Service (EKS). But I have never tried a manual install on a server. These are the instructions I ran to get Elasticsearch and Kibana up and running with HTTPS enabled between Kibana and our browser. Personally I think I would prefer setting up Elastic with Docker, and perhaps I'll add to this guide to include Docker installation later. But for now I just wanted to try a bare metal install of an Elastic Stack. To mimic installing, configuring, and accessing an Elastic Stack on a server via a cloud provider or anywhere really, I thought it would be beneficial to setup my own server on a VM to test the waters. I included how I setup an Ubuntu Server, if anyone was interested. If not, you can skip to `Install Elasticsearch`
 
 These are the guides I used to help set this up:
@@ -94,8 +92,8 @@ These are the guides I used to help set this up:
 > Now would be a really good time to take a snapshot of the Ubuntu Server
 {: .prompt-tip }
 
-## Install Elasticsearch
-
+## **Elastic Stack Install (Bare Metal)**
+### **Install Elasticsearch**
 First thing's first, we'll update and upgrade all of the packages on Ubuntu Server:
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
@@ -150,7 +148,7 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kiban
 
 Copy the output and save it for use in the next couple of steps.
 
-## **Install Kibana**
+### **Install Kibana**
 
 Download and install the Kibana debian package:
 ```
@@ -208,10 +206,69 @@ Finally we'll start Kibana
 sudo /bin/systemctl start kibana.service
 ```
 
-If evertthing worked correctly, you can open up a browser on your host and type in `https://SERVER_IP:5601`. You should be greeted with a "Your connection is not secure" warning. That's okay, because these are self-signed certificates that you created. Accept the risk and proceed to starting out with Elastic!
+If everything worked correctly, you can open up a browser on your host and type in `https://SERVER_IP:5601`. You should be greeted with a "Your connection is not secure" warning. That's okay, because these are self-signed certificates that you created. Accept the risk and proceed to starting out with Elastic!
 
 ![](/assets/img/post_images/elastic_install/snip21.png)
 
 We can sign in with user `elastic` and the password given to us from the security configuration output when we installed Elasticsearch.
 
-I'll update this post later with how to install using Docker and how to setup Agents/Beats to start sending data to our Elastic Stack.
+### **All-In-One Script Install**
+
+If you would like to setup up a single stack quick and painlessly, I through all of the commands into a script. Being that I installed this on a Debian/Ubuntu server, the script has been setup to install Debian packages only.  
+
+The script requires that some `sudo` commands be ran. This is for enabling services to autostart as well as modifying `/etc` files.
+
+It also generates self-signed certificates to enable TLS between Kibana and one's browser.
+
+When ran, the output should look similiar to this:
+```
+elastic-user@elastic:~$ ./elastic_stack.sh
+Select a number corresponding to the version you'd like to download:
+0)  8.1.1
+1)  8.1.0
+2)  8.0.1
+3)  8.0.0
+4)  7.17.1
+5)  7.17.0
+6)  7.16.3
+7)  7.16.2
+8)  7.16.1
+9)  7.16.0
+10)  Use default package that is set in the script
+Enter number: 2
+[*] Downloading Elasticsearch 8.0.1...
+[*] Download Successful!
+[*] Installing Elasticsearch...
+[sudo] password for elastic-user:
+[*] Elasticsearch Installed!
+[!] Important output saved in elasticsearch_install.out
+[*] Enabling Elasticsearch to autostart...
+[*] Starting Elasticsearch...
+[+] Successful Connection to Elasticsearch! :)
+[*] Generating Kibana Enrollment Token...
+[*] Downloading Kibana 8.0.1...
+[*] Download Successful!
+[*] Installing Kibana...
+[+] Kibana Installed!
+[*] Setting Up Kibana with Elasticsearch...
+[+] Kibana Successfully Setup with Elasticsearch
+Would you like to add a password to your self-signed keys?(y/n): n
+[*] Creating self-signed certificates...
+[+] Certificates created!
+[*] Modifying kibana.yml with new settings...
+[*] Enabling Kibana to autostart...
+[*] Starting Kibana...
+================================================================
+==              Elasticsearch & Kibana Installed              ==
+================================================================
+[*] Now go to https://SERVER_IP:5601
+[*] Login with:
+    Username: elastic
+    Password: IIOcw329s8jofYR6q5F6
+```
+
+To change the superuser password or generate enrollement tokens to add additional Elasticsearch nodes, the script outputs the initial config output the file `elasticsearch_install.out` which gives the needed commands.
+
+## **Elastic Stack Install (Docker)**
+
+![](/assets/img/post_images/elastic_install/construction.png)
