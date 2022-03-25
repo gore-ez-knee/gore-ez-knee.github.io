@@ -271,4 +271,4 @@ To change the superuser password or generate enrollement tokens to add additiona
 
 ## **Elastic Stack Install (Docker)**
 
-![](/assets/img/post_images/elastic_install/construction.png)
+![](/assets/img/post_images/elastic_install/construction.jpg)
