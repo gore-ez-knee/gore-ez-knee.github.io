@@ -214,6 +214,8 @@ We can sign in with user `elastic` and the password given to us from the securit
 
 ### **All-In-One Script Install**
 
+<https://github.com/gore-ez-knee/awesome-scripts/tree/main/elastic-quickstart-bare-metal>
+
 If you would like to setup up a single stack quick and painlessly, I through all of the commands into a script. Being that I installed this on a Debian/Ubuntu server, the script has been setup to install Debian packages only.  
 
 The script requires that some `sudo` commands be ran. This is for enabling services to autostart as well as modifying `/etc` files.
