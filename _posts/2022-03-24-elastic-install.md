@@ -174,7 +174,7 @@ sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable kibana.service
 ```
 
-Before we start Kibana, we need to configure a few things first. First we need to create some self-signed certs to enable HTTPS between Kibana and our browser, then configure `kibana.yml` to relect those changes.
+Before we start Kibana, we need to configure a few things first. First we need to create some self-signed certs to enable HTTPS between Kibana and our browser, then configure `/etc/kibana/kibana.yml` to relect those changes.
 
 To generate self-signed certs using the elasticsearch-certutil binary, run the following. You may choose to add a password to your certificate file:
 ```
@@ -187,7 +187,7 @@ sudo mkdir /etc/kibana/certs && sudo mv /usr/share/elasticsearch/kibana-certs.p1
 rts && sudo chown -R kibana: /etc/kibana/certs
 ```
 
-Now we'll update `kibana.yml`. Add the following:
+Now we'll update `/etc/kibana/kibana.yml`. Add the following:
 ```yaml
 server.host: 0.0.0.0
 server.ssl.enabled: true
@@ -216,11 +216,24 @@ We can sign in with user `elastic` and the password given to us from the securit
 
 <https://github.com/gore-ez-knee/awesome-scripts/tree/main/elastic-quickstart-bare-metal>
 
-If you would like to setup up a single stack quick and painlessly, I threw all of the commands into a script. Being that I installed this on a Debian/Ubuntu server, the script has been setup to install Debian packages only.  
+If you would like to setup up a single stack quick and painlessly, I threw all of the commands into a script. Being that I installed this on a Debian/Ubuntu server, the script has been setup to install **Debian packages only**.  
 
 The script requires that some `sudo` commands be ran. This is for enabling services to autostart as well as modifying `/etc` files.
 
 It also generates self-signed certificates to enable TLS between Kibana and one's browser.
+
+If there is a version you'd like to download that isn't shown or use debian package for a different architecture, you can manually modify the `elastic_package` and `kibana_package` variable at the beginning of the script and choose option `10`.
+```bash
+#!/bin/bash
+
+# Default packages to install if no version is selected.
+# If another architecture type is needed, you can change these names to what you need.
+# https://elastic.co/downloads/past-releases
+elastic_package="elasticsearch-8.1.1-amd64.deb"
+kibana_package="kibana-8.1.1-amd64.deb"
+...
+```
+
 
 When ran, the output should look similiar to this:
 ```
