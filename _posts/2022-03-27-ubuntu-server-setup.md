@@ -85,4 +85,4 @@ Here is a guide I created to stand up an Ubuntu Server to test standing up an El
 > Now would be a really good time to take a snapshot of the Ubuntu Server
 {: .prompt-tip }
 
-With this setup, I'm going to setup an Elastic Stack to start pulling in logs from other systems. You can follow along that journey [here]()
+With this setup, I'm going to setup an Elastic Stack to start pulling in logs from other systems. You can follow along that journey [here](https://gore-ez-knee.github.io/posts/elastic-install/)
