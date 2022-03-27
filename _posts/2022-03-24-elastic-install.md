@@ -230,9 +230,9 @@ I would also like to try out the Network Packet Capture integration, which for W
 
 |File|Link|
 |---|---|
-|Elastic Agent|https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.1.1-windows-x86_64.zip|
-|Npcap|https://npcap.com/dist/npcap-1.60.exe|
-|Packetbeat|https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-8.1.1-windows-x86_64.zip<br>https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-8.1.1-windows-x86_64.zip.sha512<br>https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-8.1.1-windows-x86_64.zip.asc|
+|Elastic Agent|<https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.1.1-windows-x86_64.zip>|
+|Npcap|<https://npcap.com/dist/npcap-1.60.exe<|
+|Packetbeat|<https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-8.1.1-windows-x86_64.zip><br><https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-8.1.1-windows-x86_64.zip.sha512><br><https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-8.1.1-windows-x86_64.zip.asc>|
 
 First we'll install Npcap on Windows. Install it with all of the selected defaults. Keep hitting Next until it finishes.
 
