@@ -12,7 +12,7 @@ image:
 
 Here is a guide I created to stand up an Ubuntu Server to test standing up an Elastic Stack.
 
-1. Downloaded the Ubuntu Server iso: https://ubuntu.com/download/server
+1. Downloaded the Ubuntu Server iso: <https://ubuntu.com/download/server>
 2. Using VMware Workstation, we "Create a New Virtual Machine"
 
     ![](/assets/img/post_images/ubuntu_server_install/snip1.png)
