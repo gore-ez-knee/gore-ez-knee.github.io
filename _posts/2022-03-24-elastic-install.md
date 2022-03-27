@@ -227,6 +227,7 @@ If we go back to Kibana, we should see that the Fleet Server has connected. Clic
 With our Fleet Server up and running, we can now install Agents on systems we want to monitor and have them managed by our Fleet Server. For this Example, I'm going to test this on a Windows 11 VM. You can download an image here: <https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/>. Just remember to ensure that the Network is configured for NAT just like the Ubuntu Server if you're following along with Ubuntu Server setup.
 
 I would also like to try out the Network Packet Capture integration, which for Windows requires `npcap` to be installed. Then we'll also need to install packetbeat. Here is a list that needs to be installed:
+
 |File|Link|
 |---|---|
 |Elastic Agent|https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.1.1-windows-x86_64.zip|
