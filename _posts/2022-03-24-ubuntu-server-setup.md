@@ -1,7 +1,7 @@
 ---
 title: Ubuntu Server Setup
 author: gore-ez-knee
-date: 2022-03-27 14:30:00 -0500
+date: 2022-03-24 14:30:00 -0500
 categories: [Misc]
 tags: [ubuntu, server, setup, vmware]
 image:
