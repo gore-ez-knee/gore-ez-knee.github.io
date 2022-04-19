@@ -86,7 +86,7 @@ Now run the next command, pasting in the enrollment token when prompted:
 
 ```
 $ sudo /usr/share/kibana/bin/kibana-setup
-? Enter enrollment token: <Enrollemnet Token String>
+? Enter enrollment token: <Enrollment Token String>
 
 ✔ Kibana configured successfully.
 
@@ -100,7 +100,7 @@ sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable kibana.service
 ```
 
-Before we start Kibana, we need to configure a few things first. First we need to create some self-signed certs to enable HTTPS between Kibana and our browser, then configure `/etc/kibana/kibana.yml` to relect those changes.
+Before we start Kibana, we need to configure a few things first. First we need to create some self-signed certs to enable HTTPS between Kibana and our browser, then configure `/etc/kibana/kibana.yml` to reflect those changes.
 
 To generate self-signed certs using the elasticsearch-certutil binary, run the following. You may choose to add a password to your certificate file:
 ```
@@ -205,7 +205,7 @@ sudo elastic-agent enroll -f \
 --fleet-server-cert=/etc/elastic-agent/certs/fleet-server/fleet-server.crt \
 --fleet-server-cert-key=/etc/elastic-agent/certs/fleet-server/fleet-server.key
 ```
-Step 6 provides the necessary info for the variables (SERVER_IP, FLEET_SERVICE_TOKEN, and ELASTICSEARCH_CA_FINGERPRINT) that need replacing. If you have followed the guide exactly so far, the certificate and keys should be in same place.
+Step 6 provides the necessary info for the variables (SERVER_IP, FLEET_SERVICE_TOKEN, and ELASTICSEARCH_CA_FINGERPRINT) that need replacing. If you have followed the guide exactly so far, the certificate and keys should be in the same place.
 
 Replace the needed values and paste the command into the server where Agent is installed and run it.
 
@@ -262,7 +262,7 @@ In Step 1 give the Integration a name. In Step 2, make sure that the tab `Existi
 
 ![](/assets/img/post_images/elastic_install/snip35.png)
 
-You'll be prompted to `Add Elastic Agent to your hosts`, but we still need to add another integration. Select `Add Elastic Agent later`. Follow the same steps to add the `Network Packet Capture` integration. You can get back to integrations selecting it under `Management` right above `Fleet` or the big blue button that appears at the bottom of the sidebar.
+You'll be prompted to `Add Elastic Agent to your hosts`, but we still need to add another integration. Select `Add Elastic Agent later`. Follow the same steps to add the `Network Packet Capture` integration. You can get back to integrations by selecting it under `Management` right above `Fleet` or the big blue button that appears at the bottom of the sidebar.
 
 ![](/assets/img/post_images/elastic_install/snip36.png)
 
@@ -316,37 +316,32 @@ There are also some pre-built Dashboards you can use to visualize the data comin
 
 <https://github.com/gore-ez-knee/awesome-scripts/tree/main/elastic-quickstart-bare-metal>
 
-If you would like to setup up a single stack quick and painlessly, I threw all of the commands into a script. Being that I installed this on a Debian/Ubuntu server, the script has been setup to install **Debian packages only**. Also this only works for Elastic version 8.0.0+ because Elastic v8 automatically creates TLS certificates for Elasticsearch communication and I haven't put checks in to create and update Elasticsearch should someone want to install an older version. 
+If you would like to setup up a single stack quickly and painlessly, I threw all of the commands into a script. Being that I installed this on a Debian/Ubuntu server, the script has been setup to install **Debian packages only**. Also this only works for Elastic version 8.0.0+ because Elastic v8 automatically creates TLS certificates for Elasticsearch communication and I haven't put checks in to create and update Elasticsearch should someone want to install an older version. 
 
-The script requires that some `sudo` commands be ran. This is for enabling services to autostart as well as modifying `/etc` files.
+The script requires that some `sudo` commands be run. This is for enabling services to autostart as well as modifying `/etc` files.
 
 It also generates self-signed certificates to enable TLS between Kibana and one's browser as well as for Fleet Server.
 
-If you'd like to choose a different architecture, you can manually modify the `elastic_package`, `kibana_package`, and `agent_package` variables at the beginning of the script and choose option `4`.
-```bash
-#!/bin/bash
+**UPDATE 18 Apr 2022**
 
-# Default packages to install if no version is selected.
-# If another architecture type is needed, you can change these names to what you need.
-# https://elastic.co/downloads/past-releases
-elastic_package="elasticsearch-8.1.1-amd64.deb"
-kibana_package="kibana-8.1.1-amd64.deb"
-agent_package="elastic-agent-8.1.1-amd64.deb"
-...
-```
+Modified the script to automatically setup Fleet Server. I eventually realized I could use a proxy (Burp Suite) to capture the API calls used when manually setting up Fleet through the UI. Then I could create `curl` commands to set everything up in the script.
 
+Still working on getting this setup with Docker the same way...
 
-When ran, the output should look similiar to this:
+When ran, the output should look similar to this:
 ```
 elastic-user@elastic:~$ sudo ./elastic_stack.sh
 [sudo] password for elastic-user:
 Select a number corresponding to the version you'd like to download:
-0)  8.1.1
-1)  8.1.0
-2)  8.0.1
-3)  8.0.0
-4)  Use Package Set in Script
+0)  8.1.2
+1)  8.1.1
+2)  8.1.0
+3)  8.0.1
+4)  8.0.0
 Enter number: 0
+Select a number corresponding the Server's IP: 
+0)  192.168.235.133
+Enter a number: 0
 [*] Downloading Elasticsearch 8.1.1...
 [*] Elasticsearch 8.1.1 Download Successful!
 [*] Installing Elasticsearch 8.1.1...
@@ -387,29 +382,14 @@ Password (again):
 [*] Generating a CA to create Fleet Server Certificates
 [!] Need to install Unzip binary
 [*] Creating Certificates for Fleet Server
+[*] Setting Up Fleet Agent Policy...DONE
+[*] Snagging Service Token...DONE
+[*] Getting Elasticsearch CA Fingerprint...DONE
+[*] Adding Fleet Server host...DONE
+[*] Enrolling Fleet...DONE
 ================================================================
-==                     Fleet-Server Setup                     ==
+==                   Fleet Server Installed                   ==
 ================================================================
-[*] Go to Kibana -> Click on Fleet
-[!] Step 1: Click on Create Policy
-[*] Step 2: Ignore. Elastic Agent is already Downloaded
-[*] Step 3: Choose "Quick start" for Deployment Mode
-[*] Step 4: Type in https://SERVER_IP:8220 and click "Add host"
-[*] Step 5: Click Generate Token
-[*] Use the following template to enroll the Fleet Server
-[*] Replace the 3 variables (SERVER_IP, FLEET_SERVER_TOKEN, & ELASTICSEARCH_CA_FINGERPRINT) with the information that Step 6 provides:
-sudo elastic-agent enroll -f \
---url=https://SERVER_IP:8220 \
---fleet-server-es=https://SERVER_IP:9200 \
---fleet-server-service-token=FLEET_SERVER_TOKEN \
---fleet-server-policy=fleet-server-policy \
---fleet-server-es-ca-trusted-fingerprint=ELASTICSEARCH_CA_FINGERPRINT \
---certificate-authorities=/etc/elasticsearch/certs/ca/ca.crt \
---fleet-server-cert=/etc/elastic-agent/certs/fleet-server/fleet-server.crt \
---fleet-server-cert-key=/etc/elastic-agent/certs/fleet-server/fleet-server.key
-[*] Once you have entered the command and the Agent shutsdown, start the agent:
-sudo service elastic-agent start
-[+] Check Fleet. You should see Fleet Server up and healthy!
 ```
 
-To change the superuser password or generate enrollement tokens to add additional Elasticsearch nodes, the script outputs the initial config output to the file `elasticsearch_install.out` which gives the needed commands.
+To change the superuser password or generate enrollment tokens to add additional Elasticsearch nodes, the script outputs the initial config output to the file `elasticsearch_install.out` which gives the needed commands.
