@@ -12,24 +12,6 @@ image:
 
 ## Web
 
-<style>
-table th:first-of-type {
-    width: 20%;
-}
-table th:nth-of-type(2) {
-    width: 10%;
-}
-table th:nth-of-type(3) {
-    width: 40%;
-}
-table th:nth-of-type(4) {
-    width: 10%;
-}
-table th:nth-of-type(5) {
-    width: 20%;
-}
-</style>
-
 |Challenge Name|Difficulty|Description|Files|Links|
 |:---:|:---:|:---:|:---:|---|
 |Kryptos Support|★☆☆☆|The secret vault used by the<br /> Longhir's planet council, Kryptos,<br /> contains some very sensitive<br /> state secrets that Virgil and<br /> Ramona are after to prove the<br /> injustice performed by the<br /> commission. Ulysses performed<br /> an initial recon at their request<br /> and found a support portal for<br /> the vault. Can you take a look if<br /> you can infiltrate this system?||[Gelzki](https://github.com/Gelzki/Cyber-Apocalypse-2022-Write-Up/blob/main/Web%20Challenges/Web%20Challenges.md#kryptos-support)<br>[Hansuuuuuuuuuu](https://github.com/Hansuuuuuuuuuu/CTF_Writeups/blob/master/Cyber-Apocalypse-CTF-2022/web_1_kryptossupport.md#web-1-kryptos-support)<br>[Almond Force (Video)](https://www.youtube.com/watch?v=_n-RTUDUrW0)<br>[Hilbert (Video)](https://www.youtube.com/watch?v=H0eNRGY_nb0)<br>[skyfr](https://skyfr.notion.site/Kryptos-Support-6d5b8999ece5473ab6bbc47a061a9e64)<br>[meispi](https://meispi.github.io/posts/cyber-apocalypse-ctf-2022/#kryptos-support-web)|
