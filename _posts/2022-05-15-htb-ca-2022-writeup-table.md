@@ -1,7 +1,7 @@
 ---
 title: HTB Cyber Apocalypse CTF - Table of Write-ups
 author: gore-ez-knee
-date: 2022-05-14 14:30:00 -0500
+date: 2022-05-15 14:30:00 -0500
 categories: [CTF, HTB CA 2022]
 tags: [ctf, htb, write-ups]
 image:
