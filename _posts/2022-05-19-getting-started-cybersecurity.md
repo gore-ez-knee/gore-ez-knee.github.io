@@ -117,7 +117,7 @@ Learn the process of scanning a target, assessing the target for vulnerabilities
 
 Also learn about Open Web Application Security Project (OWASP) [Top 10](https://owasp.org/www-project-top-ten/). These are a consensus of the most critical security risks to web applications. There  are a lot of web applications out there and as such are rife with vulnerabilities. You can also use this information to pursue [Bug Bounties](https://en.wikipedia.org/wiki/Bug_bounty_program). If you were to find anything within the scope of a companies Bug Bounty program, you can report the vulnerability to the respective companies or bug bounty platform (ie. [HackerOne](https://www.hackerone.com/) or [BugCrowd](https://www.bugcrowd.com/)) and receive some form of compensation or recognition.
 
-## Recommendations
+### Recommendations
 
 If you'd like to stick with TryHackMe, they have Learning Paths which take a lot of these recommended modules and rooms and keeps track of your progress on said path. A few of these learning paths include:
 - [Introduction to Cyber Security](https://tryhackme.com/path-action/introtocyber/join)
