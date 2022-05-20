@@ -111,7 +111,7 @@ And naturally TryHackMe offers several modules and rooms: [Scripting for Pentest
 
 ## Learn the Basics of "Hacking"
 
-![](/assets/img/post_images/intro_cyber/hack.jpg)
+![](/assets/img/post_images/intro_cyber/hack2.jpg)
 
 Learn the process of scanning a target, assessing the target for vulnerabilities, exploiting the target, and escalating ones privileges on the target. As you continue to learn more about exploitation, you're methodology will become more focused and defined. I'd recommend keeping good notes about services you've exploited, how you found them, and what tools/commands you used to exploit them.
 
@@ -132,3 +132,5 @@ YouTube has some great content for learning:
 - [LiveOverflow](https://www.youtube.com/c/LiveOverflow/playlists) also offers the same visual breakdowns and explanations across a wider range of topics.
 
 For OWASP vulnerabilities I'd recommend [PortSwigger Academy](https://portswigger.net/web-security). It's free and they offer labs which reinforce the concepts they teach you.
+
+I'd also recommend finding some Capture the Flag (CTF) events. They give you a way to practice what you've learn and give you opportunities to learn some new things as well. There is a YouTuber named [JohnHammond](https://www.youtube.com/c/JohnHammond010/videos) who goes over a lot of CTF challenges. You can get a feel for how CTFs work from him.
