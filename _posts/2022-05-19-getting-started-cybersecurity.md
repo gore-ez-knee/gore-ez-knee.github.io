@@ -133,4 +133,4 @@ YouTube has some great content for learning:
 
 For OWASP vulnerabilities I'd recommend [PortSwigger Academy](https://portswigger.net/web-security). It's free and they offer labs which reinforce the concepts they teach you.
 
-I'd also recommend finding some Capture the Flag (CTF) events. They give you a way to practice what you've learn and give you opportunities to learn some new things as well. There is a YouTuber named [JohnHammond](https://www.youtube.com/c/JohnHammond010/videos) who goes over a lot of CTF challenges. You can get a feel for how CTFs work from him.
+I'd also recommend finding some Capture the Flag (CTF) events. They give you a way to practice what you've learn and give you opportunities to learn some new things as well. There is a YouTuber named [JohnHammond](https://www.youtube.com/c/JohnHammond010/playlists?view=50&sort=dd&shelf_id=5) who goes over a lot of CTF challenges. You can get a feel for how CTFs work from him.
