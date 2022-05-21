@@ -10,7 +10,7 @@ image:
   height: 400
 ---
 
-I realized too late that I had some duplicate descriptions for a couple of the challenges. I'm hosting the files I was able to get on DropBox in case anyone wanted to try the challenges on their own after the fact. I'll add more write-ups as I find them.
+I'm hosting the files I was able to get on DropBox in case anyone wanted to try the challenges on their own after the fact. I'll add more write-ups as I find them.
 
 ## Web
 
