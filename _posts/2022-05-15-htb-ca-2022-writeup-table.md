@@ -5,7 +5,7 @@ date: 2022-05-15 14:30:00 -0500
 categories: [CTF, HTB CA 2022]
 tags: [ctf, htb, write-ups]
 image:
-  src: /assets/img/post_images/ctf/htb-ca-2022/htb-ca-ctf-banner.png
+  src: /assets/img/post_images/ctf/htb-ca-2022/htb-ca-ctf-banner-u.png
   width: 1700
   height: 400
 ---
