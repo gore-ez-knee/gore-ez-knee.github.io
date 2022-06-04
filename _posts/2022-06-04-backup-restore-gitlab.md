@@ -1,6 +1,6 @@
 ---
 title: Backup/Restore GitLab
-date: 2022-02-13 10:00:00 -0500
+date: 2022-06-04 10:00:00 -0500
 categories: [Misc, GitLab]
 tags: [gitlab, aws, s3, docker, docker-compose, gitlab-ctl]
 image:
