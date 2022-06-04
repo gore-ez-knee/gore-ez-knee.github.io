@@ -9,9 +9,9 @@ image:
   height: 300
 ---
 
-Do you have a small GitLab container running on an instance in AWS for yourself or a small team? Have you ever needed to back-up GitLab and move it to another machine wether that be on another instance or on-prem? The following are instructions on how to back-up a GitLab container to an AWS S3 bucket, deploy GitLab to another environment, pull down the backup, and finally restore the back-up on the new machine. 
+Do you have a small GitLab container running on an instance in AWS for yourself or a small team? Have you ever needed to back-up GitLab and move it to another machine wether that be on another instance or on-prem? The following are instructions on how to back-up GitLab in a container to an AWS S3 bucket, deploy a container of GitLab in another environment, pull down the backup, and finally restore the back-up on the new machine. 
 
-The instructions are assuming you have GitLab deployed on a container, but it should still work if you manually installed GitLab on a machine. I would recommend at least having it on a container, because it's way easier to update. My example Docker Compose file in Step 6 has it setup in a way that always keeps GitLab updated.  
+The instructions should still work if you manually installed GitLab on a machine. I would recommend at least having it on a container, because it's way easier to update. My example Docker Compose file in Step 6 ensures GitLab always stays up-to-date without having to manually do it.  
 
 ## Step 1. Create S3 Bucket
 Create an S3 bucket. The [architecture diagram](https://docs.gitlab.com/ee/install/aws/manual_install_aws.html#architecture) shows you can create multiple buckets for different GitLab objects. In this case, we're just worried about setting up a backup bucket.
