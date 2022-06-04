@@ -76,8 +76,6 @@ As for learning platforms, TryHackMe has a fundamentals module [Windows Fundamen
 
 This feels like one of the most crucial pieces of learning in this field. Learn the different protocols (HTTP, HTTPS, SSH, FTP, SMB, etc.). Learn how they work. Look at packet captures (pcaps) of their traffic. Learn what is normal and what isn't. Understanding how traffic is routed and how you can proxy and manipulate that traffic will help in both blue and red team engagements.
 
-Once you have a good concept of network protocols, 
-
 A few questions you can ask to get started:
 - When I type in "google.com" in my browser, how does my browser know where to go?
 - If I log-in to a website, how does it "remember" me?
@@ -97,11 +95,11 @@ Of course, TryHackMe has a few modules:
 
 ![](/assets/img/post_images/intro_cyber/script2.gif)
 
-This isn't necessarily a mandatory thing to learn. But as you move through machines, you'll find yourself repeating the same commands over and over. This is where scripting can come into play. Python is a very popular, cross-platform language that is an easy language to learn. Bash scripting can come in handy if the device you're on doesn't have Python. I like bash scripting in general. And lastly, PowerShell is a must for Windows systems. It's a scripting language built on top of Microsoft .NET technology. A lot of malware use PowerShell to execute commands against a machine. PowerShell logs can be very valuable if a company has them enabled. You can also use batch scripts in Windows as well.
+This isn't necessarily a mandatory thing to learn. But as you move through machines, you'll find yourself repeating the same commands over and over. This is where scripting can come into play. Python is a very popular, cross-platform language that is easy to learn. Bash scripting can come in handy if the device you're on doesn't have Python. And lastly, PowerShell is a must for Windows systems. It's a scripting language built on top of Microsoft .NET technology. A lot of malware uses PowerShell to execute commands against a machine. PowerShell logs can be very valuable if a company has them enabled. You can also use batch scripts in Windows as well.
 
 ### Recommendations
 
-There are many Python books available if you prefer books. If you check [Humble Bundle](https://www.humblebundle.com/) every now and then, they'll have some Python or general Cybersecurity book bundles. Right now they have a [Python Bundle](https://www.humblebundle.com/books/python-no-starch-press-books?hmb_source=&hmb_medium=product_tile&hmb_campaign=mosaic_section_1_layout_index_1_layout_type_threes_tile_index_1_c_pythonnostarchpress_bookbundle) available.
+There are many Python books available if you prefer books. If you check [Humble Bundle](https://www.humblebundle.com/) every now and then, they'll have some Python or general Cybersecurity book bundles.
 
 A list of Python books offered by No Starch Press can be found [here](https://nostarch.com/catalog/python).
 
@@ -133,4 +131,4 @@ YouTube has some great content for learning:
 
 For OWASP vulnerabilities I'd recommend [PortSwigger Academy](https://portswigger.net/web-security). It's free and they offer labs which reinforce the concepts they teach you.
 
-I'd also recommend finding some Capture the Flag (CTF) events. They give you a way to practice what you've learn and give you opportunities to learn some new things as well. There is a YouTuber named [JohnHammond](https://www.youtube.com/c/JohnHammond010/playlists?view=50&sort=dd&shelf_id=5) who goes over a lot of CTF challenges. You can get a feel for how CTFs work from him.
+I'd also recommend finding some Capture the Flag (CTF) events. They give you a way to practice what you've learned and give you opportunities to learn some new things as well. There is a YouTuber named [JohnHammond](https://www.youtube.com/c/JohnHammond010/playlists?view=50&sort=dd&shelf_id=5) who goes over a lot of CTF challenges. You can get a feel for how CTFs work from him.
