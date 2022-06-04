@@ -125,6 +125,7 @@ Watchtower is here to check for new GitLab images every 5 minutes and deploys th
     aws s3 cp s3://gl-backup-example-bucket/11493107454_2018_04_25_10.6.4-ce_gitlab_backup.tar .
     sudo docker cp 11493107454_2018_04_25_10.6.4-ce_gitlab_backup.tar gitlab:/var/opt/gitlab/backups/11493107454_2018_04_25_10.6.4-ce_gitlab_backup.tar
     sudo docker exec -it gitlab chown git:git /var/opt/gitlab/backups/11493107454_2018_04_25_10.6.4-ce_gitlab_backup.tar
+    ```
 - Stop the puma and sidekiq services and confirm the services are down:
     ```
     sudo docker exec -it gitlab gitlab-ctl stop puma
