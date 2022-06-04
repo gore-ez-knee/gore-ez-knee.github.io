@@ -4,7 +4,7 @@ date: 2022-06-04 10:00:00 -0500
 categories: [Misc, GitLab]
 tags: [gitlab, aws, s3, docker, docker-compose, gitlab-ctl]
 image:
-  src: /assets/img/post_images/gitlab-backup-restore/gitlab-banner.jpg
+  src: /assets/img/post_images/gitlab_backup_restore/gitlab-banner.jpg
   width: 1920
   height: 300
 ---
