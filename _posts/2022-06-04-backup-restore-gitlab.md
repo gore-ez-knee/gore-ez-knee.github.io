@@ -9,8 +9,6 @@ image:
   height: 300
 ---
 
-## Intro
-
 Do you have a small GitLab container running on an instance in AWS for yourself or a small team? Have you ever needed to back-up GitLab and move it to another machine wether that be on another instance or on-prem? The following are instructions on how to back-up a GitLab container to an AWS S3 bucket, deploy GitLab to another environment, pull down the backup, and finally restore the back-up on the new machine. 
 
 The instructions are assuming you have GitLab deployed on a container, but it should still work if you manually installed GitLab on a machine. I would recommend at least having it on a container, because it's way easier to update. My example Docker Compose file in Step 6 has it setup in a way that always keeps GitLab updated.  
@@ -70,7 +68,7 @@ Once the policy has been created, attach the EC2 instance role to the instance.
     sudo docker exec -it gitlab gitlab-backup create SKIP=registry
     ```
 
-> Note: I skip the registry to avoid an error I received when trying to restore from backup. It got mad at me for not having a registry.gz file, or something like that. Since I wasn't using GitLabs registry, I just skipped it hence the `SKIP=registry`
+> Note: I skip the registry to avoid an error I received when trying to restore from backup. It got mad at me for not having a registry.gz file, or something like that. Since I wasn't using GitLab's registry, I just skipped it hence the `SKIP=registry`
 {: .prompt-info }
 
 - Once the command finishes, check the S3 bucket for a backup file. This command will also create a backup file in `/var/opt/gitlab/backups/`
@@ -152,5 +150,6 @@ Watchtower is here to check for new GitLab images every 5 minutes and deploys th
     ```
     sudo docker restart gitlab
     ```
-The `gitlab-ctl restart` might be irrelevant with restarting the container, but that's the redundant method I ran to get this to work and I didn't double-check to see if it was necessary.
+The `gitlab-ctl restart` might be irrelevant with restarting the container, but that's the redundant method I ran to get this to work and didn't double-check to see if it was necessary.
+
 ## Profit
