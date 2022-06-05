@@ -75,7 +75,7 @@ Once the policy has been created, attach the EC2 instance role to the instance.
 ## Step 5. Manually Backup the `gitlab-secrets.json` and `gitlab.rb` Files
 When you create a backup, it does not backup the `gitlab-secrets.json` or `gitlab.rb` files. It even tells you you must back those two files up manually. I found that it was easier to push those files to the same bucket as the backups and pull them to the new instance.
 In our case, using Docker...
-- Copy the files from the mounted Docker volumes: `sudo cp /srv/gitlab2/config/gitlab.rb /srv/gitlab2/config/gitlab-secrets.json .`
+- Copy the files from the mounted Docker volumes: `sudo cp /srv/gitlab/config/gitlab.rb /srv/gitlab/config/gitlab-secrets.json .`
 - Move those files to your bucket:
     ```
     aws s3 cp gitlab.rb s3://gl-backup-example-bucket/
@@ -152,4 +152,4 @@ Watchtower is here to check for new GitLab images every 5 minutes and deploys th
     ```
 The `gitlab-ctl restart` might be irrelevant with restarting the container, but that's the redundant method I ran to get this to work and didn't double-check to see if it was necessary.
 
-## Profit
+## Step 8. Profit
