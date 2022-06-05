@@ -150,6 +150,6 @@ Watchtower is here to check for new GitLab images every 5 minutes and deploys th
     ```
     sudo docker restart gitlab
     ```
-The `gitlab-ctl restart` might be irrelevant with restarting the container, but that's the redundant method I ran to get this to work and didn't double-check to see if it was necessary.
+The `gitlab-ctl restart` might be irrelevant with restarting the container. I didn't double-check to see if it was necessary.
 
 ## Step 8. Profit
