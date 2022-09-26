@@ -4,7 +4,7 @@ date: 2022-09-25 10:00:00 -0500
 categories: [Misc, AWS]
 tags: [aws, kali, novnc, tigervnc, vnc, websockify]
 image:
-  src: /assets/img/post_images/gitlab_backup_restore/kali-banner.png
+  src: /assets/img/post_images/kali_stream_aws/kali-banner.png
   width: 1920
   height: 300
 ---
