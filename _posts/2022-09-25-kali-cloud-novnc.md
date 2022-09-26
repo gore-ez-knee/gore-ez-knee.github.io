@@ -86,7 +86,7 @@ Would you like to enter a view-only password (y/n)? n
 A view-only password is not used
 ```
 
-Then we'll need to create a file needed for VNC. If it doesn't exist, it gets a little upset. It doesn't need to have anything in so we can just:
+Then we'll need to create a file needed for VNC. If it doesn't exist, it gets a little upset. It doesn't need to have anything in it, so we can just:
 
 ```
 touch ~/.Xresources
