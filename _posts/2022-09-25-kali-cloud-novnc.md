@@ -1,5 +1,5 @@
 ---
-title: Stream Kali Desktop to your Browser from AWS
+title: Stream Kali Linux to your Browser from AWS
 date: 2022-09-25 10:00:00 -0500
 categories: [Misc, AWS]
 tags: [aws, kali, novnc, tigervnc, vnc, websockify]
