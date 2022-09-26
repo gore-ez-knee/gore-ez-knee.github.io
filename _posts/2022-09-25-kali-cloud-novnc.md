@@ -145,7 +145,7 @@ I scripted this process out to generate the necessary files, create a random pas
   touch ~/.Xresources
   tigervncserver -xstartup /usr/bin/xfce4-session -localhost
   websockify -D --web /usr/share/novnc/ localhost:8081 localhost:5901
-  echo "http://localhost:8081/vnc.html?resize=remote&password=${mypasswd}"
+  printf "\nhttp://localhost:8081/vnc.html?resize=remote&password=${mypasswd}\n\n"
   ```
 - Make the script executable:
   ```bash
